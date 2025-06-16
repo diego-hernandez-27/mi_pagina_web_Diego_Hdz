@@ -110,6 +110,42 @@
 
         <section id="pasatiempos">
             <h2>Pasatiempos</h2>
+            <div class="hobbies-container">
+                <div class="hobby-card" data-hobby="dibujo">
+                    <div class="hobby-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Dibujo</h3>
+                </div>
+                <div class="hobby-card" data-hobby="videojuegos">
+                    <div class="hobby-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Videojuegos</h3>
+                </div>
+                <div class="hobby-card" data-hobby="piano">
+                    <div class="hobby-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Piano</h3>
+                </div>
+            </div>
+
+            <!-- Modal para mostrar el contenido expandido -->
+            <div class="hobby-modal" id="hobbyModal">
+                <div class="modal-content">
+                    <button class="close-modal">&times;</button>
+                    <div class="modal-body">
+                        <div class="video-container">
+                            <iframe id="hobbyVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="hobby-description">
+                            <h3 id="modalTitle"></h3>
+                            <p id="modalDescription"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="curiosidades">

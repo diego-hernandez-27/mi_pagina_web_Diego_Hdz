@@ -568,3 +568,179 @@ section {
         font-size: 2.5rem;
     }
 }
+
+/* Hobbies Section Styles */
+.hobbies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hobby-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 15px solid transparent;
+    background: linear-gradient(#0099ff, #33ccff) padding-box,
+                linear-gradient(135deg, #ff6b6b, #4ecdc4) border-box;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.hobby-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
+.hobby-card:hover::before {
+    transform: translateX(100%);
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover .hobby-icon {
+    transform: scale(1.2);
+}
+
+.hobby-card h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Modal Styles */
+.hobby-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hobby-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #0099ff, #33ccff);
+    margin: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+    border: 15px solid transparent;
+    background: linear-gradient(#0099ff, #33ccff) padding-box,
+                linear-gradient(135deg, #ff6b6b, #4ecdc4) border-box;
+}
+
+.hobby-modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-modal:hover {
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.hobby-description {
+    color: #fff;
+    padding: 1rem;
+}
+
+.hobby-description h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hobby-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Hobbies Section */
+@media screen and (max-width: 768px) {
+    .hobbies-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .hobby-icon {
+        font-size: 3rem;
+    }
+}
