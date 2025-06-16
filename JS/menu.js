@@ -54,7 +54,7 @@ const hobbyData = {
     dibujo: {
         video: 'https://www.youtube.com/embed/4MgQKB9BgU0?si=fkaktTv8PcJxPZW4',
         title: 'Dibujo',
-        description: 'No soy muy bueno dibujando pero es algo que me apasiona, cada día intento tener una mejora en mi estilo, y obviamente que hay. Últimamente no he tenido tiempo de retomarlo, pero eso no significa que le haya perdido el amor, al contrario, se ha hecho más grande'
+        description: 'No soy muy bueno dibujando pero es algo que me apasiona, cada día intento tener una mejora en mi estilo, y obviamente que hay. Últimamente no he tenido tiempo de retomarlo, pero eso no significa que le haya perdido el amor, al contrario, se ha hecho más grande.'
     },
     videojuegos: {
         video: 'https://www.youtube.com/embed/Ldu6Ipo8Xg8?si=CZvkqqugAEsQMSjj',
