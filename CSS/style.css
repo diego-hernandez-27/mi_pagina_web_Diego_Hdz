@@ -114,6 +114,153 @@ section {
     padding: 2rem 0;
 }
 
+#yo {
+    position: relative;
+    background-color: white;
+    background-image: url('../IMG/home/cielo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 15px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    overflow: hidden;
+    background-clip: padding-box;
+    background-image: url('../IMG/home/cielo.png'),
+                      linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    background-size: cover, auto;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.parallax-clouds {
+    position: absolute;
+    top: 18%;
+    right: -30px;
+    width: 500px;
+    height: 333px;
+    background-image: url('../IMG/home/nubes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    transform: translateX(0);
+    transition: transform 0.1s linear;
+    z-index: 2;
+}
+
+.parallax-sun {
+    position: absolute;
+    top: 12%;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+    background-image: url('../IMG/home/sol.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+    transform: translateY(0);
+    transition: transform 0.1s linear;
+    z-index: 1;
+}
+
+.mountains {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-image: url('../IMG/home/montanas.png');
+    background-size: 100% 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.parallax-sho {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 350px;
+    background-image: url('../IMG/home/sho.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 4;
+    transition: transform 0.1s linear;
+}
+
+.grass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-image: url('../IMG/home/pasto.png');
+    background-size: 100% 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+#yo h1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    margin: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+#yo h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    margin: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive sizing for larger screens */
+@media screen and (min-width: 1024px) {
+    .parallax-clouds {
+        width: 800px;
+        height: 533px;
+        top: 100px;
+        right: -100px;
+    }
+
+    .parallax-sun {
+        width: 300px;
+        height: 300px;
+        top: 100px;
+        left: 80px;
+    }
+
+    .mountains {
+        height: 80%;
+    }
+
+    .parallax-sho {
+        width: 500px;
+        height: 500px;
+    }
+
+    .grass {
+        height: 40%;
+    }
+}
+
 /* Estilos responsivos */
 @media screen and (max-width: 768px) {
     .menu-toggle {

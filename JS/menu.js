@@ -20,4 +20,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// Parallax effect for clouds, sun and sho
+window.addEventListener('scroll', () => {
+    const clouds = document.querySelector('.parallax-clouds');
+    const sun = document.querySelector('.parallax-sun');
+    const sho = document.querySelector('.parallax-sho');
+    const scrollPosition = window.scrollY;
+    
+    // Cloud moves right
+    const moveX = scrollPosition * 0.5;
+    clouds.style.transform = `translateX(${moveX}px)`;
+    
+    // Sun moves down
+    const moveY = scrollPosition * 0.3;
+    sun.style.transform = `translateY(${moveY}px)`;
+
+    // Sho moves left
+    const moveShoX = scrollPosition * -0.4; // Negative value to move left
+    sho.style.transform = `translateX(calc(-50% + ${moveShoX}px))`;
 }); 
