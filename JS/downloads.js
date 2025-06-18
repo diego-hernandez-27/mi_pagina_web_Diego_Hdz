@@ -43,20 +43,25 @@ document.addEventListener('DOMContentLoaded', function() {
         showDownloadAnimation(this);
 
         const keyContent = `-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0vx7agoebGcQSuuPiLJX
-ZptN9nndrQmbXEps2aiAFbWhM78LhWx4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tS
-oc/6es03NtnrbtxnMXLxMq6MgUQinhoVILaII6kR8aHu8Kzqdx1w9PxISpFFlD53
-7bB7M32jstv1Q2eOyP4RlAcqFfhn+uEnwXwNcfwdzV7WgcoR0XQv4lz9kq5p8K4B
-m1BFjIZeEuO7oK/9YLpcoQAdLe9ZseFDzoyZpmbfpLfg0T44RidM6fgc2u6kRfNT
-4pLf4GRmktgK4urfhug1kCdmzdZxVK2f4HEqGPu0x2X5UaNq4FHHzUqB0K7U5A8z
-8QIDAQAB
+MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAoW4FySdAXW+UrZ0sjSrN
+PSCCEvNIJNYcLBi8lowDF5oKCCS8yxzTf8l7AOWR4Dv1J0pxzMOL+HvVGTW4XHKC
+xVbBt8u3tyk/EeWfuXWZBBQ5BuR1Ha4bSHbKKfdEkKTMarlH7tbFhrrbtAHHpgiT
+aM3QB2Y3KlpMLyK0/g7K/48Nikt0z7FKSUgL0f23494TT9L97DeVt9gaj3FgTdey
+1fcyI5fIPX7xAfJOoFjw8bkzh+5ztYmlETJ0KtiBJPx9njQ4RXIVeQYXWza/fr+V
+T7nddLeyXb0ASgFO9kB39E0xpVmjEOUz14cp2yLrwu6EnY7YbS0SEohbqFCCdbGu
+iK2Q2WOzyhycu/7De/B92zMtEPLbY5LabDEOkCF6ncafUroMImMn4ejZ71by7csp
+YGSHBLLwPAMw+ldZkaalL/PRqoKNtMonc2YKbBKctyRp4pXWGFyxxXAbk3KkkAAi
+MXitD35MXIaFiIXPWPlTRhm/CA8MCOk4FKlv3b8JOcdr9m6Ox/4Vyv3vveSoo19z
+UY/3ds0HbmYVU06lkuA2E5V0JowsV0LC4gVEFq0ych1zNH0qnn+d9RYqzO11xbH4
+WnnwLCvbBv/Fw5T2dOisKGLsqKDdUyFbRrEQ7vXyijYI6Ctw2inuA4KzRUoCCIFb
+nbeqRyTDgz5dIb8E3maViGkCAwEAAQ==
 -----END PUBLIC KEY-----`;
 
         const blob = new Blob([keyContent], { type: 'text/plain' });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'public_key.pem';
+        a.download = 'Diego_public_key.pem';
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);
