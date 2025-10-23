@@ -42,27 +42,27 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         showDownloadAnimation(this);
 
-        const keyContent = `-----BEGIN PUBLIC KEY-----
-MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAw5W7b3uDeOhHH9bmHeFd
-NoMlR/NbmtMSPN6mQJYPftX3N9o98TDc9AR9ryADG95005TTqxwV+r0OYsI16rwu
-c9qjjNaqcKuFsTnlVZdka3lS59XeoEf1ps9Z9lft1yrSHumsMqaadUgVVosYRSZI
-JI0fGYy25weN4vN4NE5mnzjsWQHDxKpS58bwmEcRPNQr+Q/1Ik0A39/WC3fuJe4W
-uxzxcSlLUZG/3rc+TkLh40yLVF/D0QzONWhRR+G1A1NUn9hWXqEIwYN/R1FqX0HX
-0SPVg2PYFZs7BGW9fk6CUFhwR7dJAyyTNgwYlvW8QrVD5FnoMaAe8/7QxhxRB5Q2
-bHybhrwKnXtMBJeyjGEQPlHCob+vWbk3+Nf7ARw3Qr5QvzkXU2kr0u3OH5bNcEMk
-M9hXa6W7zdjOqZ+IhOuW5GKdU44+wIsj+8Kr5w0aO0l3/RIOBMMegRtxK8vmYMXR
-ZAO2JK67Liawv61E4oUF952hmEtUEP5dMxyKkmpYsERMGRQILgPRviR0Zn83yK8N
-lPyxHNmw4ANfGdXz9n6iwpsNp+h8nxiwzH6TlFH1P+pZ8PuTafrxfGbus3qtFGJZ
-cnA/49B6tR1Kh+7zW9GY4a8prAOWnHUnaEXH69H15uJfMJsss0YGr8QZnFi2X2tV
-69yJXtlfb1NyUaLMblmMlfECAwEAAQ==
------END PUBLIC KEY-----
+        const keyContent = `
+# Llave Pública ECDSA
+# Curva: y² = x³ + 1x + 10 (mod 11)
+# Generador G = (6, 1)
+# Orden q = 10
+
+p=11
+a=1
+b=10
+Gx=6
+Gy=1
+q=10
+Qx=1
+Qy=1
 `;
 
         const blob = new Blob([keyContent], { type: 'text/plain' });
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'Diego_public_key.pem';
+        a.download = 'Diego(Alicia)_public_key.pem';
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);
